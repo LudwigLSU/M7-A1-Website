@@ -1,0 +1,70 @@
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 24px;               /* spacing between logo and links */
+  padding: 8px 22px 8px 8px; /* extra padding on right since logo has its own */
+  border-radius: 9999px;   /* the pill shape */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  width: fit-content;      /* shrink-wrap to content */
+
+
+
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);  /* shifts it back by half its own width */
+  width: fit-content;
+  z-index: 100;
+
+
+  /* Center the pill horizontally and keep it at the top of the page */
+
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);  /* shifts it back by half its own width */
+  width: fit-content;
+  z-index: 100;
+
+  padding: 8px 22px 8px 8px; /* extra padding on right since logo has its own */
+
+}
+
+.logo-link img{
+    width: 150px;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;      /* makes it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img {
+  width: 20px;
+  height: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+
+
+.pill a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 15px;
+}
