@@ -4,15 +4,14 @@
   padding: 0;
 }
 
-
-
-.pill {
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 26px;              /* spacing between logo and links */
   padding: 6px 24px 6px 10px;/* extra padding on right since logo has its own */
   background: black;
+  padding: 12px 20px;      /* extra padding for better touch targets */
 }
 
 
@@ -20,29 +19,13 @@
 
 
 .logo-link img{
-    width: 130px;
+    width: 200px;
     display: block;
     position: relative;
     left: 20px;
 }
 
 
-
-
-.logo-circle {
-  width: 40px;
-  height: 40px;
-  background: #000;
-  border-radius: 50%;      /* makes it a circle */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-circle img {
-  width: 20px;
-  height: 20px;
-}
 
 .nav-link {
   text-decoration: none;
@@ -64,6 +47,7 @@
   color: #e5e5e5;
 
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
 }
 
 .nav-link:hover {
@@ -80,22 +64,12 @@
 
 
 
-.pill a {
+.nav a {
   text-decoration: none;
   color: white;
   font-weight: 600;
   font-size: 15px;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -197,13 +171,23 @@
 
 
 
+.Summary_Characters {
+     background: linear-gradient(to bottom, #000000 0%, #070606 100%);
+}
+
+.Summary_Characters hr{
+    position: relative;
+    bottom: 50px;
+    left: 18%;
+    width: 950px;
+    
+    
+}
 
 
-
-.About {
+.Summary {
   padding: 100px;
   color: #fff;
-  background: linear-gradient(to bottom, #640101 0%, #070606 100%);
   text-align: center;
 
   display: flex;
@@ -214,7 +198,7 @@
   min-height: 60vh; /* Ensure it takes up full viewport height */
 }
 
-.About h1 {
+.Summary h1 {
   font-family: 'Anton', sans-serif;
   line-height: 0.95;
   text-transform: uppercase;
@@ -227,7 +211,7 @@
 }
 
 
-.About h1::after {
+.Summary h1::after {
   content: "";
   display: block;
   width: 60px;
@@ -236,7 +220,7 @@
   margin: 16px auto 0;
 }
 
-.About p {
+.Summary p {
   max-width: 480px;
   font-size: 1.05rem;
   line-height: 1.8;
@@ -250,6 +234,45 @@
 
 
 
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.character-card {
+  text-align: center;
+}
+
+.character-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #b30000; /* a little DMC-style red accent */
+}
+
+.character-card p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Center the last row when it doesn't fill evenly (5 items = 3 + 2) */
+.character-card:nth-child(4) {
+  grid-column: 1 / span 2;
+  justify-self: end;
+  width: 90%;
+}
+
+.character-card:nth-child(5) {
+  grid-column: 2 / span 2;
+  justify-self: start;
+  width: 90%;
+}
 
 
 
@@ -345,6 +368,3 @@
 .footer-content p {
   margin: 2px 0;
 }
-
-
-
