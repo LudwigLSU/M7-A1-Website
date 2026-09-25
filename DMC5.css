@@ -81,10 +81,14 @@
 
 
 .hero {
-  padding: 100px;
+  padding: 100px 20px;
   color: #fff;
   background: linear-gradient(to bottom, #292828 0%, #111 100%);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   
 }
@@ -103,7 +107,8 @@
 
 
 .hero-title {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
   font-size: clamp(56px, 6.9vw, 120px);
   line-height: 0.95;
   text-transform: uppercase;
@@ -111,6 +116,17 @@
   margin: 0 0 28px;
 
   text-align: center;
+  width: 100%;
+}
+
+.hero-title .line {
+  display: block;
+  text-align: center;
+}
+
+.hero-title .line,
+.hero-title .red {
+  font-family: 'Outfit', sans-serif;
 }
 
 .red { 
@@ -127,13 +143,19 @@
 
 .tagline {
   max-width: 480px;
+  font-family: 'Outfit', sans-serif;
   font-size: 16px;
   line-height: 26px;
   color: rgba(255, 255, 255, 0.65);
-  margin-bottom: 36px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
 
-  position: relative;
-  left: 31%;
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
 
@@ -155,7 +177,6 @@
   background: #e11d2e;
   color: #fff;
   box-shadow: 0 0 18px rgba(225, 29, 46, 0.45);
-  margin-right: 16px;
 }
 
 .btn-fill:hover { 
@@ -202,7 +223,7 @@
 }
 
 .Summary h1 {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
   line-height: 0.95;
   text-transform: uppercase;
   letter-spacing: 8px;
@@ -235,7 +256,7 @@
 
 
 .Characters-Title{
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
   line-height: 0.95;
   text-transform: uppercase;
   letter-spacing: 8px;
@@ -338,7 +359,7 @@
 
 
 .Gallery-Title{
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
   line-height: 0.95;
   text-transform: uppercase;
   letter-spacing: 8px;
