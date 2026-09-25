@@ -1,39 +1,33 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-
-
 .pill {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 26px;              /* spacing between logo and links */
-  padding: 6px 24px 6px 10px;/* extra padding on right since logo has its own */
+  gap: 26px;
+  /* spacing between logo and links */
+  padding: 6px 24px 6px 10px;
+  /* extra padding on right since logo has its own */
   background: black;
 }
 
-
-
-
-
-.logo-link img{
-    width: 130px;
-    display: block;
-    position: relative;
-    left: 20px;
+.logo-link img {
+  width: 130px;
+  display: block;
+  position: relative;
+  left: 20px;
 }
-
-
-
 
 .logo-circle {
   width: 40px;
   height: 40px;
   background: #000;
-  border-radius: 50%;      /* makes it a circle */
+  border-radius: 50%;
+  /* makes it a circle */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,8 +52,10 @@
 .nav-link {
   font-family: 'Outfit', sans-serif;
   font-size: 13px;
-  font-weight: 500;        /* medium, not bold — sleeker */
-  letter-spacing: 1.5px;   /* wide tracking = premium feel */
+  font-weight: 500;
+  /* medium, not bold — sleeker */
+  letter-spacing: 1.5px;
+  /* wide tracking = premium feel */
   text-transform: uppercase;
   color: #e5e5e5;
 
@@ -72,13 +68,9 @@
 
 }
 
-
-
 .link:hover {
   opacity: 0.6;
 }
-
-
 
 .pill a {
   text-decoration: none;
@@ -87,29 +79,11 @@
   font-size: 15px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .hero {
   padding: 100px;
   color: #fff;
   background: linear-gradient(to bottom, #292828 0%, #111 100%);
   text-align: center;
-
-  
 }
 
 
@@ -132,20 +106,17 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0 0 28px;
-
   text-align: center;
 }
 
-.red { 
-  color: #de0416; 
-  text-shadow: 0 0 30px rgba(255, 3, 24, 0.5); 
+.red {
+  color: #de0416;
+  text-shadow: 0 0 30px rgba(255, 3, 24, 0.5);
 }
 
-
-
-.outline { 
-  color: transparent; 
-  -webkit-text-stroke: 1.5px rgba(255,255,255,0.55); 
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.55);
 }
 
 .tagline {
@@ -159,7 +130,6 @@
   left: 31%;
 }
 
-
 .btn {
   font-family: 'Outfit', sans-serif;
   font-size: 13px;
@@ -170,7 +140,6 @@
   padding: 14px 32px;
   border-radius: 9999px;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
   display: inline-block;
 }
 
@@ -181,26 +150,20 @@
   margin-right: 16px;
 }
 
-.btn-fill:hover { 
-  box-shadow: 0 0 30px rgba(225, 29, 46, 0.75); 
-  transform: translateY(-2px); }
+.btn-fill:hover {
+  box-shadow: 0 0 30px rgba(225, 29, 46, 0.75);
+  transform: translateY(-2px);
+}
 
 .btn-ghost {
   border: 1px solid rgba(255, 255, 255, 0.35);
   color: #e5e5e5;
 }
 
-.btn-ghost:hover { 
-  border-color: #ff2a3c; 
-  color: #ff2a3c; 
+.btn-ghost:hover {
+  border-color: #ff2a3c;
+  color: #ff2a3c;
 }
-
-
-
-
-
-
-
 
 .About {
   padding: 100px;
@@ -213,7 +176,8 @@
   align-items: center;
   padding: 80px 20px;
 
-  min-height: 60vh; /* Ensure it takes up full viewport height */
+  min-height: 60vh;
+  /* Ensure it takes up full viewport height */
 }
 
 .About h1 {
@@ -227,7 +191,6 @@
   margin-bottom: 30px;
 
 }
-
 
 .About h1::after {
   content: "";
@@ -245,24 +208,6 @@
   color: rgba(255, 255, 255, 0.65);
   margin-bottom: 36px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer {
   background: #000;
