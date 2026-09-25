@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devil May Cry 2</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="DMC2.css" />
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="pill">
+            <a href="Home.html" class="logo-link">
+                <img src="homepage-images/navlogo.png" alt="Logo" />
+            </a>
+            <div class="nav-links">
+                <a href="DMC1.html" class="nav-link">DMC 1</a>
+                <a href="DMC2.html" class="nav-link active">DMC 2</a>
+                <a href="DMC3.html" class="nav-link">DMC 3</a>
+                <a href="DMC4.html" class="nav-link">DMC 4</a>
+                <a href="DMC5.html" class="nav-link">DMC 5</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="kicker">Devil May Cry 2: The Night of the Demon</div>
+
+            <div class="hero-visual">
+                <img src="../dmc2-images/Dante_pfp.jpg" alt="Dante" />
+            </div>
+
+            <div class="hero-content">
+                <p class="eyebrow">The Legendary Hunter</p>
+                <h1 class="hero-title">
+                    <span class="line">The Devil</span>
+                    <span class="line red">Within.</span>
+                    <span class="line outline">Dante's Story</span>
+                </h1>
+                <p>The son of the legendary Dark Knight Sparda. In Devil May Cry 2, Dante is noticeably more brooding,
+                    silent, and stoic compared to his usual wisecracking persona in other titles. He relies on a two-faced
+                    coin toss to decide whether to accept contracts or take action.</p>
+
+                <div class="hero-btns">
+                    <a href="#plot" class="btn btn-fill">Read Plot</a>
+                    <a href="#characters" class="btn btn-ghost">Meet Characters</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="Plot" id="plot">
+            <h1>Plot</h1>
+            <div class="section-content">
+                <p>Set on the isolated Dumary Island, the story follows Dante and Lucia as they attempt to stop Arius, the CEO
+                    of the global megacorporation Uroboros. Arius seeks to gather four sacred artifacts called the Arcana to
+                    break the seal between the human realm and the Netherworld, allowing him to absorb the power of the ancient
+                    demon king Argosax the Chaos and gain immortality.</p>
+
+                <p>During her journey, Lucia makes the agonizing discovery that she is not human, but an artificial "Arachne"
+                    demon created by Arius who was deemed defective, abandoned, and later rescued and raised by her adoptive
+                    mother, Matier. Despite questioning her own humanity, Lucia continues fighting to protect the island.</p>
+
+                <p>Though Dante and Lucia manage to interrupt the ritual, the gateway to the Demon Realm begins to open anyway.
+                    Dante leaves Lucia in the human world to deal with a mutated Arius while he rides his motorcycle directly
+                    into the portal to eliminate Argosax. Dante successfully defeats Argosax in the Demon World and drives
+                    deeper into Hell, leaving his ultimate fate in this chapter open-ended.</p>
+            </div>
+        </div>
+
+        <div class="Main_character" id="characters">
+            <h1>Main Characters</h1>
+
+            <div class="character-grid">
+                <button type="button" class="character-card active" data-name="Dante"
+                    data-description="Legendary devil hunter and half-demon son of Sparda, hired to stop Arius's ascension.">
+                    <img src="../dmc2-images/Dante_character.jpg" alt="Dante" />
+                    <span class="char-name">Dante</span>
+                    <span class="char-role">Protagonist</span>
+                </button>
+
+                <button type="button" class="character-card" data-name="Lucia"
+                    data-description="Agile warrior of the Vie de Marli who fights with twin curved daggers and throwing knives (Kutlani).">
+                    <img src="../dmc2-images/Lucia_character.jpg" alt="Lucia" />
+                    <span class="char-name">Lucia</span>
+                    <span class="char-role">Secondary Protagonist</span>
+                </button>
+
+                <button type="button" class="character-card" data-name="Matier"
+                    data-description="An elder clan guardian of Dumary Island who once fought alongside Sparda centuries prior to seal away demons.">
+                    <img src="../dmc2-images/Matier_character.jpg" alt="Matier" />
+                    <span class="char-name">Matier</span>
+                    <span class="char-role">Support / Mentor</span>
+                </button>
+
+                <button type="button" class="character-card" data-name="Arius"
+                    data-description="An ambitious, dark-magic-using corporate tycoon attempting to achieve godhood by unlocking the Demon Realm.">
+                    <img src="../dmc2-images/Arius_character.jpg" alt="Arius" />
+                    <span class="char-name">Arius</span>
+                    <span class="char-role">Main Antagonist</span>
+                </button>
+
+                <button type="button" class="character-card" data-name="Argosax"
+                    data-description="An ancient demonic deity who formerly ruled the Demon World alongside Mundus before being sealed by Sparda.">
+                    <img src="../dmc2-images/Argosax_character.webp" alt="Argosax" />
+                    <span class="char-name">Argosax</span>
+                    <span class="char-role">Sub-Antagonist</span>
+                </button>
+            </div>
+
+            <div class="character-details is-visible" id="character-details">
+                <div class="detail-indicator">◆ Active Character</div>
+                <h2 id="character-name">Dante</h2>
+                <p id="character-description">Dante is the demon hunter at the center of the story, a rebellious swordsman whose power and attitude make him the island's most dangerous protector.</p>
+            </div>
+        </div>
+
+        <div class="media-section" id="media">
+            <h1>Media</h1>
+            <div class="media-grid">
+                <div class="media-card">
+                    <div class="media-img-wrapper">
+                        <img src="../dmc2-images/Dante_pfp.jpg" alt="Dante portrait" />
+                    </div>
+                    <p class="media-caption">Dante's signature portrait</p>
+                </div>
+                <div class="media-card">
+                    <div class="media-img-wrapper">
+                        <img src="../dmc2-images/Lucia_pfp.png" alt="Lucia portrait" />
+                    </div>
+                    <p class="media-caption">Lucia in battle stance</p>
+                </div>
+                <div class="media-card">
+                    <div class="media-img-wrapper">
+                        <img src="../dmc2-images/Matier_character.jpg" alt="Matier" />
+                    </div>
+                    <p class="media-caption">Matier guarding the island</p>
+                </div>
+                <div class="media-card">
+                    <div class="media-img-wrapper">
+                        <img src="../dmc2-images/Arius_character.jpg" alt="Arius" />
+                    </div>
+                    <p class="media-caption">Arius and the Arcana plot</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer">
+        <div class="footer-links">
+            <a href="Home.html">Activity Based Website</a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.facebook.com/devilmaycry" target="_blank" rel="noreferrer">
+                <img src="homepage-images/facebook (2).png" alt="Facebook" />
+            </a>
+            <a href="https://x.com/DevilMayCry?lang=en" target="_blank" rel="noreferrer">
+                <img src="homepage-images/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com/devilmaycrygame/" target="_blank" rel="noreferrer">
+                <img src="homepage-images/instagram.png" alt="Instagram" />
+            </a>
+        </div>
+
+        <div class="footer-content">
+            <p>© 2026 Capcom. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="DMC2.js"></script>
+
+</body>
+
+</html>
