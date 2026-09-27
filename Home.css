@@ -168,6 +168,11 @@ html {
   box-shadow: 0 0 18px rgba(225, 29, 46, 0.45);
 }
 
+.btn-fill a {
+  color: #fefdfd;
+  text-decoration: none;
+}
+
 .btn-fill:hover {
   box-shadow: 0 0 30px rgba(225, 29, 46, 0.75);
   transform: translateY(-2px);
