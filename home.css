@@ -26,26 +26,14 @@ img,
   display: block;
 }
 
-/* ==========================================================================
-   1. NAVIGATION BAR (Standardized across the entire project)
-   ========================================================================== */
-.navbar {
-  width: 100%;
-  background: #000000;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
 
-.pill {
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 26px;
   padding: 6px 24px 6px 10px;
   background: black;
-  width: 100%;
 }
 
 .logo-link img {
@@ -64,8 +52,8 @@ img,
   text-decoration: none;
   font-family: 'Outfit', sans-serif;
   font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
+  font-weight: 500;        /* medium, not bold — sleeker */
+  letter-spacing: 1.5px;   /* wide tracking = premium feel */
   text-transform: uppercase;
   color: #e5e5e5;
   padding: 10px;
@@ -73,22 +61,29 @@ img,
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
   color: #ff2a3c;
   text-shadow: 0 0 10px rgba(225, 29, 46, 0.7);
+
 }
 
-.pill a {
+
+
+.link:hover {
+  opacity: 0.6;
+}
+
+
+
+.nav a {
   text-decoration: none;
   color: white;
   font-weight: 600;
   font-size: 15px;
 }
 
-/* ==========================================================================
-   2. HERO SECTION
-   ========================================================================== */
+
+/* HERO SECTION */
 .hero {
   padding: 100px 20px;
   color: #fff;

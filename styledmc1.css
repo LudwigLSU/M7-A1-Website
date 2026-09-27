@@ -25,25 +25,13 @@ img,
 }
 
 /* Navigation Bar */
-.navbar {
-  width: 100%;
-  background: #000000;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.pill {
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 26px;
-  /* spacing between logo and links */
   padding: 6px 24px 6px 10px;
-  /* extra padding on right since logo has its own */
   background: black;
-  width: 100%;
 }
 
 .logo-link img {
@@ -51,21 +39,6 @@ img,
   display: block;
   position: relative;
   left: 20px;
-}
-
-.logo-circle {
-  width: 40px;
-  height: 40px;
-  background: #000;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-circle img {
-  width: 20px;
-  height: 20px;
 }
 
 .nav-links {
@@ -77,8 +50,8 @@ img,
   text-decoration: none;
   font-family: 'Outfit', sans-serif;
   font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
+  font-weight: 500;        /* medium, not bold — sleeker */
+  letter-spacing: 1.5px;   /* wide tracking = premium feel */
   text-transform: uppercase;
   color: #e5e5e5;
   padding: 10px;
@@ -89,14 +62,24 @@ img,
 .nav-link:hover {
   color: #ff2a3c;
   text-shadow: 0 0 10px rgba(225, 29, 46, 0.7);
+
 }
 
-.pill a {
+
+
+.link:hover {
+  opacity: 0.6;
+}
+
+
+
+.nav a {
   text-decoration: none;
   color: white;
   font-weight: 600;
   font-size: 15px;
 }
+
 
 /* Hero Section */
 .hero {
@@ -469,30 +452,3 @@ img,
   margin: 2px 0;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-  .pill {
-    flex-direction: column;
-    padding: 12px 10px;
-    gap: 12px;
-  }
-
-  .logo-link img {
-    left: 0;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .character-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .character-card,
-  .character-card:nth-child(4),
-  .character-card:nth-child(5) {
-    grid-column: span 1;
-  }
-}
