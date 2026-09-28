@@ -1,56 +1,62 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: #e5e5e5;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Global Responsive Images */
+img,
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navigation Bar */
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 26px;              /* spacing between logo and links */
-  padding: 6px 24px 6px 10px;/* extra padding on right since logo has its own */
+  gap: 26px;
+  padding: 6px 24px 6px 10px;
   background: black;
-  padding: 12px 20px;      /* extra padding for better touch targets */
 }
 
-
-
-
-
-.logo-link img{
-    width: 200px;
-    display: block;
-    position: relative;
-    left: 20px;
+.logo-link img {
+  width: 130px;
+  display: block;
+  position: relative;
+  left: 20px;
 }
 
-
+.nav-links {
+  display: flex;
+  align-items: center;
+}
 
 .nav-link {
   text-decoration: none;
-  color: #111;
-  font-weight: 600;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  line-height: 1.5;
-  padding: 10px;
-  position: relative;
-  right: 6px;
-  
-}
-
-.nav-link {
   font-family: 'Outfit', sans-serif;
   font-size: 13px;
   font-weight: 500;        /* medium, not bold — sleeker */
   letter-spacing: 1.5px;   /* wide tracking = premium feel */
   text-transform: uppercase;
   color: #e5e5e5;
-
+  padding: 10px;
+  line-height: 1.5;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
 }
 
 .nav-link:hover {
@@ -75,11 +81,7 @@
 }
 
 
-
-
-
-
-
+/* Hero Section */
 .hero {
   padding: 100px 20px;
   color: #fff;
@@ -89,10 +91,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  
 }
-
 
 .kicker {
   display: inline-block;
@@ -105,16 +104,13 @@
   margin-bottom: 24px;
 }
 
-
 .hero-title {
   font-family: 'Outfit', sans-serif;
-  font-weight: 800;
-  font-size: clamp(56px, 6.9vw, 120px);
+  font-size: clamp(52px, 6.9vw, 110px);
   line-height: 0.95;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0 0 28px;
-
   text-align: center;
   width: 100%;
 }
@@ -124,30 +120,23 @@
   text-align: center;
 }
 
-.hero-title .line,
-.hero-title .red {
-  font-family: 'Outfit', sans-serif;
+.red {
+  color: #de0416;
+  text-shadow: 0 0 30px rgba(255, 3, 24, 0.5);
 }
 
-.red { 
-  color: #de0416; 
-  text-shadow: 0 0 30px rgba(255, 3, 24, 0.5); 
-}
-
-
-
-.outline { 
-  color: transparent; 
-  -webkit-text-stroke: 1.5px rgba(255,255,255,0.55); 
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.55);
 }
 
 .tagline {
-  max-width: 480px;
+  max-width: 520px;
   font-family: 'Outfit', sans-serif;
   font-size: 16px;
   line-height: 26px;
   color: rgba(255, 255, 255, 0.65);
-  margin: 0 auto 36px;
+  margin: 0 auto 36px auto;
   text-align: center;
 }
 
@@ -157,7 +146,6 @@
   align-items: center;
   gap: 16px;
 }
-
 
 .btn {
   font-family: 'Outfit', sans-serif;
@@ -169,7 +157,6 @@
   padding: 14px 32px;
   border-radius: 9999px;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
   display: inline-block;
 }
 
@@ -179,63 +166,40 @@
   box-shadow: 0 0 18px rgba(225, 29, 46, 0.45);
 }
 
-.btn-fill:hover { 
-  box-shadow: 0 0 30px rgba(225, 29, 46, 0.75); 
-  transform: translateY(-2px); }
+.btn-fill:hover {
+  box-shadow: 0 0 30px rgba(225, 29, 46, 0.75);
+  transform: translateY(-2px);
+}
 
 .btn-ghost {
   border: 1px solid rgba(255, 255, 255, 0.35);
   color: #e5e5e5;
 }
 
-.btn-ghost:hover { 
-  border-color: #ff2a3c; 
-  color: #ff2a3c; 
+.btn-ghost:hover {
+  border-color: #ff2a3c;
+  color: #ff2a3c;
 }
 
-
-
-.Summary_Characters {
-     background: linear-gradient(to bottom, #000000 0%, #070606 100%);
-}
-
-.Summary_Characters hr{
-    position: relative;
-    bottom: 50px;
-    left: 18%;
-    width: 950px;
-    
-    
-}
-
-
-.Summary {
-  padding: 100px;
-  color: #fff;
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Sections General */
+.section {
   padding: 80px 20px;
-
-  min-height: 60vh; /* Ensure it takes up full viewport height */
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.Summary h1 {
+.section-title {
   font-family: 'Outfit', sans-serif;
+  font-size: 3.2rem;
   line-height: 0.95;
   text-transform: uppercase;
-  letter-spacing: 8px;
-  margin: 0 0 28px;
-
-  font-size: 3.5rem;
+  letter-spacing: 6px;
+  text-align: center;
   margin-bottom: 30px;
-
+  color: #fff;
 }
 
-
-.Summary h1::after {
+.section-title::after {
   content: "";
   display: block;
   width: 60px;
@@ -244,109 +208,67 @@
   margin: 16px auto 0;
 }
 
-.Summary p {
-  max-width: 480px;
+/* Plot Section */
+.plot-section {
+  background: #000;
+  max-width: 100%;
+  padding: 80px 10%;
+}
+
+.section-divider {
+  width: 950px;
+  max-width: calc(100% - 40px);
+  height: 1px;
+  margin: 0 auto;
+  border: 0;
+  background: rgba(240, 233, 233, 0.25);
+}
+
+.section-content {
+  max-width: 680px;
+  margin: 0 auto;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.05rem;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.65);
-  margin-bottom: 36px;
-}
-
-
-
-
-.Characters-Title{
-  font-family: 'Outfit', sans-serif;
-  line-height: 0.95;
-  text-transform: uppercase;
-  letter-spacing: 8px;
-  margin: 0 0 28px;
-
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-
-
-  padding: 0px;
-  color: #fff;
   text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 32px 20px 12px;
-
-
 }
 
-.Characters-Title h1::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #e11d2e;
-  margin: 16px auto 0;
+.section-content p {
+  margin-bottom: 20px;
 }
 
-
+/* Character Section (6-Column Grid Layout) */
+.character-section {
+  max-width: 100%;
+  background: #000;
+}
 
 .character-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 12px 20px 20px;
+  gap: 20px;
+  max-width: 780px;
+  margin: 40px auto 0;
+  padding: 0 20px 20px;
 }
 
 .character-card {
-  text-align: center;
   grid-column: span 2;
-  transition: transform 0.30s ease-in-out, filter 0.15s ease-in-out;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .character-card:hover {
-  transform: translateY(-6px);
-  filter: drop-shadow(0 8px 12px rgba(225, 29, 46, 0.35));
+  transform: translateY(-5px);
+  border-color: #e11d2e;
 }
 
-
-.character-card img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 2px solid #b30000; /* a little DMC-style red accent */
-  transition: transform 0.35s ease-in-out;
-}
-
-.character-card:hover img {
-  transform: scale(1.04);
-}
-
-.character-card:first-child img {
-  object-position: center -4%;
-}
-
-.character-card:nth-child(4) img {
-  object-position: center 29%;
-}
-
-.character-card:nth-child(5) img {
-  object-position: center -1%;
-}
-
-.character-card p {
-  margin-top: 8px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.65);
-  transition: color 0.35s ease-in-out;
-}
-
-.character-card:hover p {
-  color: #fff;
-}
-
-
+/* Centers card 4 and 5 beneath the first 3 */
 .character-card:nth-child(4) {
   grid-column: 2 / span 2;
 }
@@ -355,99 +277,108 @@
   grid-column: 4 / span 2;
 }
 
-
-
-
-.Gallery-Title{
-  font-family: 'Outfit', sans-serif;
-  line-height: 0.95;
-  text-transform: uppercase;
-  letter-spacing: 8px;
-  margin: 0 0 28px;
-
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-
-
-  padding: 0px;
-  color: #fff;
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 32px 20px 12px;
-}
-
-
-.Gallery-Title::after{
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #e11d2e;
-  margin: 16px auto 0;
-}
-
-
-.game-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  padding: 20px 160px 160px;
-}
-
-.game-card {
-  aspect-ratio: 16 / 9;
+.card-img-wrapper {
+  width: 100%;
+  height: 180px;
+  border-radius: 6px;
   overflow: hidden;
-  border-radius: 8px;
-  background: #1a1a1a;
+  margin-bottom: 16px;
+  background: #222;
 }
 
-.game-card img {
+.card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.25s ease;
+  object-position: center top;
 }
 
-.game-card:hover img {
-  transform: scale(1.05);
+.character-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 6px;
 }
 
+.char-role {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #e11d2e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
 
+.character-card p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
 
+/* Media Section */
+.media-section {
+  max-width: 100%;
+  background: #000;
+}
 
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 0 20px 20px;
+}
 
+.media-card {
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 12px;
+}
 
+.media-img-wrapper {
+  width: 100%;
+  height: 190px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #222;
+}
 
+.media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
 
+.media-card:hover .media-img {
+  transform: scale(1.04);
+}
 
+.media-caption {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 10px;
+  text-align: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Footer Section */
 .footer {
   background: #000;
   border-top: 3px solid #e11d2e;
   color: #e5e5e5;
   text-align: center;
   padding: 28px 20px 20px;
-}
-
-.footer {
   position: relative;
   bottom: 0;
   left: 0;
@@ -455,7 +386,6 @@
   z-index: 100;
 }
 
-/* mini nav */
 .footer-links {
   display: flex;
   justify-content: center;
@@ -479,7 +409,6 @@
   text-shadow: 0 0 10px rgba(225, 29, 46, 0.7);
 }
 
-/* socials — since these are <img> icons, style the anchors as the hover target */
 .footer-social {
   display: flex;
   justify-content: center;
@@ -510,11 +439,11 @@
   transform: translateY(-2px);
 }
 
-/* legal */
 .footer-content {
   margin-top: 20px;
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-family: 'Outfit', sans-serif;
   font-size: 12px;
   color: #777;
 }

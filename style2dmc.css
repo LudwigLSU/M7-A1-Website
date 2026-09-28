@@ -24,9 +24,10 @@ img,
 .navbar {
   width: 100%;
   background: #000000;
-  position: static;
+  position: sticky;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
 
 .pill {
@@ -34,26 +35,15 @@ img,
   align-items: center;
   justify-content: space-between;
   gap: 26px;
-  padding: 12px 40px; /* Expands header across full width */
-  background: #000000;
+  /* spacing between logo and links */
+  padding: 6px 24px 6px 10px;
+  /* extra padding on right since logo has its own */
+  background: black;
   width: 100%;
-  max-width: 100%; /* Spans 100% edge-to-edge */
-}
-
-.pill {
-  position: relative !important;
-  top: auto;
-  left: auto;
-  transform: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 26px;
-  padding: 6px 0px 6px 10px;
 }
 
 .logo-link img {
-  width: 145px;
+  width: 130px;
   display: block;
   position: relative;
   left: 20px;
@@ -74,6 +64,11 @@ img,
   height: 20px;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
 .nav-link {
   text-decoration: none;
   font-family: 'Outfit', sans-serif;
@@ -92,18 +87,6 @@ img,
   text-shadow: 0 0 10px rgba(225, 29, 46, 0.7);
 }
 
-
-
-.pill {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 26px;
-  /* spacing between logo and links */
-  padding: 6px 24px 6px 10px;
-  /* extra padding on right since logo has its own */
-  background: black;
-}
 .pill a {
   text-decoration: none;
   color: white;
@@ -135,7 +118,7 @@ img,
 }
 
 .hero-title {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(56px, 6.9vw, 120px);
   line-height: 0.95;
   text-transform: uppercase;
@@ -219,7 +202,7 @@ img,
 }
 
 .section-title {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 3.5rem;
   line-height: 0.95;
   text-transform: uppercase;
@@ -319,7 +302,7 @@ img,
 }
 
 .character-card h3 {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.8rem;
   line-height: 0.95;
   text-transform: uppercase;
@@ -377,6 +360,11 @@ img,
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.media-card:hover .media-img {
+  transform: scale(1.04);
 }
 
 .media-caption {
