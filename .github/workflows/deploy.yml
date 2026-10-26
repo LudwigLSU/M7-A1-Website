@@ -24,6 +24,7 @@ jobs:
               grep -iq "<html" "$file" && echo "Validated structure for $file" || (echo "Invalid HTML structure in $file" && exit 1)
             fi
           done
+
   # STEP 2: Continuous Deployment (Runs ONLY when code is merged/pushed to main)
   deploy-to-server:
     runs-on: ubuntu-latest
@@ -32,6 +33,11 @@ jobs:
     steps:
       - name: Checkout Repository Code
         uses: actions/checkout@v5
+      
+      # FIX: Remove the hidden .git folder so SFTP doesn't throw permission errors
+      - name: Remove .git folder
+        run: rm -rf .git
+
       # This replaces manual WinSCP drag-and-drop by uploading via SFTP
       - name: Transfer Files via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
@@ -41,5 +47,5 @@ jobs:
           port: 22
           password: ${{ secrets.SFTP_PASSWORD }}
           local_path: "./"
-          remote_path: "/home/lsu-source-fandomhub/htdocs/fandomhub.lsu-source.org/" # <--- Make sure this matches your WinSCP path
+          remote_path: "/home/lsu-source-fandomhub/htdocs/fandomhub.lsu-source.org/"
           args: "-o ConnectTimeout=30"
