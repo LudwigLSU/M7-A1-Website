@@ -41,5 +41,5 @@ jobs:
           port: 22
           password: ${{ secrets.SFTP_PASSWORD }}
           local_path: "./"
-          remote_path: "/home/lsu-source-test/htdocs/test.lsu-source.org/" # <--- Make sure this matches your WinSCP path
+          remote_path: "/home/lsu-source-fandomhub/htdocs/fandomhub.lsu-source.org/" # <--- Make sure this matches your WinSCP path
           args: "-o ConnectTimeout=30"
