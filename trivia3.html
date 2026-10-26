@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia | Devil May Cry 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style3dmc.css" />
+    <link rel="icon" type="image/png" href="images/Homepage/Logo Patch.png" />
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <div class="nav">
+        <a href="home.html" class="logo-link">
+            <img src="Homepage_img/navlogo.png" alt="Devil May Cry Logo" />
+        </a>
+        <div class="nav-links">
+            <a href="dmc1.html" class="nav-link">DMC 1</a>
+            <a href="dmc2.html" class="nav-link">DMC 2</a>
+            <a href="dmc3.html" class="nav-link">DMC 3</a>
+            <a href="dmc4.html" class="nav-link">DMC 4</a>
+            <a href="dmc5.html" class="nav-link">DMC 5</a>
+            <a href="trivia3.html" class="nav-link active">Trivia</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-hero">
+            <h1>Trivia</h1>
+            <p>Quick facts about Devil May Cry 3: Dante's Awakening, then test what you know.</p>
+        </section>
+
+        <section class="section trivia-section">
+            <h2 class="section-title">Did You Know?</h2>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <h3>Chronological First</h3>
+                    <p>Devil May Cry 3 is a prequel set years before the original game, showing a young Dante opening
+                        his devil-hunting shop.</p>
+                </div>
+                <div class="fact-card">
+                    <h3>Combat Styles</h3>
+                    <p>It introduced the iconic Style system—Trickster, Swordmaster, Gunslinger, and Royalguard—defining
+                        the series' high-speed combat.</p>
+                </div>
+                <div class="fact-card">
+                    <h3>Special Edition</h3>
+                    <p>Due to the original North American release's brutal difficulty, Capcom released a Special Edition
+                        in 2006 featuring Vergil as a playable character.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">Test Your Knowledge</h2>
+            <div class="quiz" id="quiz" aria-live="polite">
+                <div class="quiz-progress" id="quiz-progress"></div>
+                <h3 class="quiz-question" id="quiz-question"></h3>
+                <div class="quiz-options" id="quiz-options"></div>
+                <p class="quiz-feedback" id="quiz-feedback"></p>
+                <button class="btn btn-fill quiz-next" id="quiz-next" hidden>Next Question</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer-links">
+            <a href="home.html">Activity Based Website</a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.facebook.com/devilmaycry" target="_blank" rel="noopener noreferrer">
+                <img src="Homepage_img/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://x.com/DevilMayCry?lang=en" target="_blank" rel="noopener noreferrer">
+                <img src="Homepage_img/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com/devilmaycrygame/" target="_blank" rel="noopener noreferrer">
+                <img src="Homepage_img/instagram.png" alt="Instagram" />
+            </a>
+        </div>
+
+        <div class="footer-content">
+            <p>© 2026 Capcom. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                q: "What is the name of the ancient demonic tower raised by Vergil and Arkham?",
+                options: ["The Qliphoth", "Temen-ni-gru", "Mallet Island", "Fortuna Castle"],
+                answer: 1,
+                note: "Temen-ni-gru was sealed away by Sparda 2,000 years ago to cut off the Demon World.",
+            },
+            {
+                q: "What is Lady's birth name before she renounced it?",
+                options: ["Mary", "Kyrie", "Eva", "Trish"],
+                answer: 0,
+                note: "She cast aside the name Mary after her father, Arkham, sacrificed her mother for demonic power.",
+            },
+            {
+                q: "Which weapon triggers Dante's Devil Trigger for the first time after he is impaled by it?",
+                options: ["Force Edge", "Yamato", "Rebellion", "Agni & Rudra"],
+                answer: 2,
+                note: "Vergil stabs Dante with Dante's own sword, Rebellion, awakening his dormant demonic blood.",
+            },
+            {
+                q: "Who is the eccentric jester that guides Dante through the tower?",
+                options: ["Sanctus", "Mundus", "Arkham", "Beowulf"],
+                answer: 2,
+                note: "Jester is Arkham's alter-ego, manipulating Dante, Vergil, and Lady to break the tower's seal.",
+            },
+            {
+                q: "What are the two halves of the Perfect Amulet given to Dante and Vergil by their mother?",
+                options: ["Gold and Silver", "Red and Blue", "Sun and Moon", "Light and Shadow"],
+                answer: 0,
+                note: "Eva gifted the two halves of the amulet to the twin brothers on their birthday.",
+            },
+        ];
+
+        let current = 0;
+        let score = 0;
+
+        const progressEl = document.getElementById("quiz-progress");
+        const questionEl = document.getElementById("quiz-question");
+        const optionsEl = document.getElementById("quiz-options");
+        const feedbackEl = document.getElementById("quiz-feedback");
+        const nextBtn = document.getElementById("quiz-next");
+
+        function showQuestion() {
+            const item = questions[current];
+            progressEl.textContent = "Question " + (current + 1) + " of " + questions.length;
+            questionEl.textContent = item.q;
+            feedbackEl.textContent = "";
+            nextBtn.hidden = true;
+            optionsEl.innerHTML = "";
+
+            item.options.forEach((text, i) => {
+                const btn = document.createElement("button");
+                btn.className = "quiz-option";
+                btn.textContent = text;
+                btn.addEventListener("click", () => choose(i));
+                optionsEl.appendChild(btn);
+            });
+        }
+
+        function choose(index) {
+            const item = questions[current];
+            const buttons = optionsEl.querySelectorAll(".quiz-option");
+            buttons.forEach((b, i) => {
+                b.disabled = true;
+                if (i === item.answer) b.classList.add("correct");
+            });
+
+            if (index === item.answer) {
+                score++;
+                feedbackEl.textContent = "Correct! " + item.note;
+            } else {
+                buttons[index].classList.add("wrong");
+                feedbackEl.textContent = "Not quite. " + item.note;
+            }
+
+            nextBtn.textContent = current === questions.length - 1 ? "See Results" : "Next Question";
+            nextBtn.hidden = false;
+            nextBtn.focus();
+        }
+
+        function showResults() {
+            progressEl.textContent = "Quiz complete";
+            questionEl.textContent = "Your score";
+            optionsEl.innerHTML = '<p class="quiz-score">' + score + " / " + questions.length + "</p>";
+            feedbackEl.textContent =
+                score === questions.length
+                    ? "SSStylish! This party's getting crazy!"
+                    : score >= 3
+                        ? "Solid work, devil hunter."
+                        : "You need more motivation. Time to replay DMC 3!";
+            nextBtn.textContent = "Play Again";
+            nextBtn.hidden = false;
+            nextBtn.onclick = restart;
+        }
+
+        function restart() {
+            current = 0;
+            score = 0;
+            nextBtn.onclick = advance;
+            showQuestion();
+        }
+
+        function advance() {
+            current++;
+            if (current < questions.length) {
+                showQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        nextBtn.onclick = advance;
+        showQuestion();
+    </script>
+</body>
+
+</html>
